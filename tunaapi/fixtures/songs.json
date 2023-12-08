@@ -1,0 +1,12 @@
+[
+  {
+    "model": "tunaapi.song",
+    "pk": 1,
+    "fields": {
+      "title": "My Song",
+      "artist_id": 1,
+      "album": "My Album",
+      "length": 180
+    }
+  }
+  ]
