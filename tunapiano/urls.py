@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from rest_framework import routers
+from tunaapi.views import SongGenreView
+from tunaapi.views import SongView
+from tunaapi.views import ArtistView
+
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'songgenres', SongGenreView, 'songgenre')
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'songs', SongView, 'song')
+router.register(r'artists', ArtistView, 'artist')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include(router.urls)),
 ]
