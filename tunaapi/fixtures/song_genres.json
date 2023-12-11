@@ -1,6 +1,6 @@
 [
   {
-    "model": "tunaapi.songgenre",
+    "model": "tunaapi.song_genres",
     "pk": 1,
     "fields": {
         "song_id": 1,
